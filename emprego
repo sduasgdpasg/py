@@ -1,0 +1,29 @@
+def equacao():
+    a = int(input('Insira o valor de A:\n'))
+    b = int(input('Insira o valor de B:\n'))
+    c = int(input('Insira o valor de C:\n'))
+
+    d = int( b ** 2 - 4 * c * a)
+    x = float((-b + d ** 1 / 2) / (2 * a))
+    x_ = float((-b - d ** 1 / 2) / (2 * a))
+    print('x é igual a:', str(x))
+    print('x_ é igual a:', str(x_))
+    depois_da_equacao()
+
+def depois_da_equacao():
+
+    escolha = int(input("""Deseja calcular novamente? Tecle: 1 para Sim - 2 para Não:"""))
+
+    if escolha == 1:
+        equacao()# Caso a escolha seja 1, vamos chamar a função novamente
+
+
+    elif escolha == 2:
+     exit(0) # Senão, caso escolha seja 2, finalizamos o programando dizendo ao SO que deu tudo certo (0)
+
+    else:
+        print("Caractere invalido!")
+
+
+
+equacao()
